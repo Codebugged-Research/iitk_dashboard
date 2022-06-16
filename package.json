@@ -1,65 +1,26 @@
 {
-  "name": "iitkdashboard",
-  "version": "0.0.1",
-  "description": "IITK Dashboard",
+  "name": "iitk_dashboard",
+  "version": "1.0.0",
+  "description": "![version](https://img.shields.io/badge/version-1.0.1-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/purity-ui-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/purity-ui-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/purity-ui-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/purity-ui-dashboard/issues?q=is%3Aissue+is%3Aclosed)",
   "main": "index.js",
-  "keywords": [
-    "react",
-    "reactjs",
-    "argon",
-    "argon-react",
-    "dashboard",
-    "dashboard-react",
-    "argon-dashboard",
-    "argon-dashboard-react"
-  ],
-  "author": "Creative Tim",
-  "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "compile:scss": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css",
-    "minify:scss": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.min.css --output-style compressed",
-    "map:scss": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css --source-map true",
-    "build:scss": "npm run compile:scss && npm run minify:scss && npm run map:scss"
+    "start": "directus start",
+    "pre": "npx directus bootstrap",
+    "restore": "npx directus schema apply snapshot.yaml",
+    "backup": "npx directus schema snapshot snapshot.yaml"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codebugged-Research/iitk_dashboard.git"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Codebugged-Research/iitk_dashboard/issues"
+  },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.15.3",
-    "bootstrap": "4.6.0",
-    "chart.js": "2.9.4",
-    "classnames": "2.3.1",
-    "moment": "2.29.1",
-    "node-sass": "6.0.1",
-    "node-sass-package-importer": "5.3.2",
-    "nouislider": "15.2.0",
-    "react": "17.0.2",
-    "react-chartjs-2": "2.11.1",
-    "react-copy-to-clipboard": "5.0.3",
-    "react-datetime": "3.0.4",
-    "react-dom": "17.0.2",
-    "react-router-dom": "5.2.0",
-    "react-scripts": "4.0.3",
-    "reactstrap": "8.9.0"
+    "directus": "^9.12.2"
   },
-  "devDependencies": {
-    "gulp": "4.0.2",
-    "gulp-append-prepend": "1.0.9"
-  },
-  "optionalDependencies": {
-    "eslint-plugin-flowtype": "5.8.0",
-    "jquery": "3.6.0",
-    "typescript": "4.3.5"
-  }
+  "homepage": "https://github.com/Codebugged-Research/iitk_dashboard#readme"
 }

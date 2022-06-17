@@ -1,0 +1,1142 @@
+version: 1
+directus: 9.12.2
+collections:
+  - collection: pcd_instance
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: pcd_instance
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: draft
+    schema:
+      comment: null
+      name: pcd_instance
+      schema: public
+  - collection: pcd_instance_files_1
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: pcd_instance_files_1
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      comment: null
+      name: pcd_instance_files_1
+      schema: public
+fields:
+  - collection: directus_dashboards
+    field: color
+    meta: null
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: color
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: directus_dashboards
+    type: string
+  - collection: pcd_instance
+    field: accuracy
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: accuracy
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: 1-5cm
+            value: 1-5cm
+          - text: 5-10cm
+            value: 5-10cm
+          - text: 10-15cm
+            value: 10-15cm
+          - text: 15-20cm
+            value: 15-20cm
+          - text: 20-above cm
+            value: 20-abovecm
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: 1-5cm
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: accuracy
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: string
+  - collection: pcd_instance
+    field: charge
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: charge
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        choices:
+          - text: Free
+            value: free
+          - text: Paid
+            value: paid
+        max: 100000000000000
+        min: 0
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: numeric
+      default_value: 0
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: charge
+      numeric_precision: 10
+      numeric_scale: 5
+      schema: public
+      table: pcd_instance
+    type: decimal
+  - collection: pcd_instance
+    field: data_density
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: data_density
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: 1-less
+            value: 1-less
+          - text: 1-5
+            value: 1-5
+          - text: 5-10
+            value: 5-10
+          - text: 10-15
+            value: 10-15
+          - text: 15-25
+            value: 15-25
+          - text: 25-50
+            value: 25-50
+          - text: above50
+            value: above50
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: 1-5cm
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: data_density
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: string
+  - collection: pcd_instance
+    field: data_type
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: data_type
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Field
+            value: field
+          - text: Simulated
+            value: simualated
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: field
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: data_type
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: string
+  - collection: pcd_instance
+    field: date_created
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: timestamp with time zone
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: date_created
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: timestamp
+  - collection: pcd_instance
+    field: date_updated
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_updated
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - date-updated
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: timestamp with time zone
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: date_updated
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: timestamp
+  - collection: pcd_instance
+    field: environment
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: environment
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Clear
+            value: clear
+          - text: Rainy
+            value: rainy
+          - text: Foggy
+            value: foggy
+          - text: Dusty
+            value: dusty
+          - text: All
+            value: all
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: clear
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: environment
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: string
+  - collection: pcd_instance
+    field: id
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: uuid
+  - collection: pcd_instance
+    field: io_files
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: io_files
+      group: null
+      hidden: false
+      interface: files
+      note: null
+      options:
+        folder: 0e96b5b6-2506-4701-bcfc-07946ccd6e27
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - files
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema: null
+    type: alias
+  - collection: pcd_instance
+    field: labels
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: labels
+      group: null
+      hidden: false
+      interface: tags
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: json
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: labels
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: json
+  - collection: pcd_instance
+    field: place
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: place
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: place
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: string
+  - collection: pcd_instance
+    field: point_record
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: point_record
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: XYZ
+            value: xyz
+          - text: XYZL
+            value: xyzl
+          - text: XYZRGB
+            value: xyzrgb
+          - text: XYZLRGB
+            value: xyzlrgb
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: xyz
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: point_record
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: string
+  - collection: pcd_instance
+    field: segmented_file
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: segmented_file
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options:
+        folder: 97e8569b-1681-4b13-834d-1a5599e6cd63
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: segmented_file
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: uuid
+  - collection: pcd_instance
+    field: sensor
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: sensor
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: ALS
+            value: als
+          - text: MLS
+            value: mls
+          - text: ULS
+            value: uls
+          - text: TLS
+            value: tls
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: als
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: sensor
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: string
+  - collection: pcd_instance
+    field: status
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: $t:published
+            value: published
+            foreground: '#FFFFFF'
+            background: var(--primary)
+          - text: $t:draft
+            value: draft
+            foreground: '#18222F'
+            background: '#D3DAE4'
+          - text: $t:archived
+            value: archived
+            foreground: '#FFFFFF'
+            background: var(--warning)
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: $t:published
+            value: published
+          - text: $t:draft
+            value: draft
+          - text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: draft
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: false
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: status
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: string
+  - collection: pcd_instance
+    field: terrain
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: null
+      display_options: null
+      field: terrain
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Urban
+            value: urban
+          - text: Semi-Urban
+            value: semiurban
+          - text: Rural
+            value: rural
+          - text: Forest
+            value: forest
+          - text: All
+            value: all
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: urban
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: terrain
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: string
+  - collection: pcd_instance
+    field: user_created
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_users
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: user_created
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: uuid
+  - collection: pcd_instance
+    field: user_updated
+    meta:
+      collection: pcd_instance
+      conditions: null
+      display: user
+      display_options: null
+      field: user_updated
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - user-updated
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_users
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: user_updated
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance
+    type: uuid
+  - collection: pcd_instance_files_1
+    field: directus_files_id
+    meta:
+      collection: pcd_instance_files_1
+      conditions: null
+      display: null
+      display_options: null
+      field: directus_files_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: directus_files_id
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance_files_1
+    type: uuid
+  - collection: pcd_instance_files_1
+    field: id
+    meta:
+      collection: pcd_instance_files_1
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: nextval('pcd_instance_files_1_id_seq'::regclass)
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: true
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: pcd_instance_files_1
+    type: integer
+  - collection: pcd_instance_files_1
+    field: pcd_instance_id
+    meta:
+      collection: pcd_instance_files_1
+      conditions: null
+      display: null
+      display_options: null
+      field: pcd_instance_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: pcd_instance
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: pcd_instance_id
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: pcd_instance_files_1
+    type: uuid
+relations:
+  - collection: pcd_instance
+    field: segmented_file
+    meta:
+      junction_field: null
+      many_collection: pcd_instance
+      many_field: segmented_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: directus_files
+    schema:
+      column: segmented_file
+      constraint_name: pcd_instance_segmented_file_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: pcd_instance
+  - collection: pcd_instance
+    field: user_created
+    meta:
+      junction_field: null
+      many_collection: pcd_instance
+      many_field: user_created
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: directus_users
+    schema:
+      column: user_created
+      constraint_name: pcd_instance_user_created_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_users
+      on_delete: NO ACTION
+      on_update: NO ACTION
+      table: pcd_instance
+  - collection: pcd_instance
+    field: user_updated
+    meta:
+      junction_field: null
+      many_collection: pcd_instance
+      many_field: user_updated
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: directus_users
+    schema:
+      column: user_updated
+      constraint_name: pcd_instance_user_updated_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_users
+      on_delete: NO ACTION
+      on_update: NO ACTION
+      table: pcd_instance
+  - collection: pcd_instance_files_1
+    field: directus_files_id
+    meta:
+      junction_field: pcd_instance_id
+      many_collection: pcd_instance_files_1
+      many_field: directus_files_id
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: directus_files
+    schema:
+      column: directus_files_id
+      constraint_name: pcd_instance_files_1_directus_files_id_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: pcd_instance_files_1
+  - collection: pcd_instance_files_1
+    field: pcd_instance_id
+    meta:
+      junction_field: directus_files_id
+      many_collection: pcd_instance_files_1
+      many_field: pcd_instance_id
+      one_allowed_collections: null
+      one_collection: pcd_instance
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: io_files
+      sort_field: null
+    related_collection: pcd_instance
+    schema:
+      column: pcd_instance_id
+      constraint_name: pcd_instance_files_1_pcd_instance_id_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: pcd_instance
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: pcd_instance_files_1
